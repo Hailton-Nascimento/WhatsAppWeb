@@ -1,0 +1,392 @@
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+}
+
+
+/* side bar */
+
+.sidebar {
+    width: 410px;
+    /* width: 29%;
+    min-width: 300px; */
+    height: 90vh;
+    display: inline-block;
+    position: relative;
+}
+
+
+/* toolbar*/
+
+.toolbar-container {
+    width: 100%;
+    height: 60px;
+    background-color: #EEE;
+    position: relative;
+}
+
+.usuario-foto {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #CCC;
+    position: absolute;
+    left: 15px;
+    top: 5px;
+}
+
+.usuario {
+    display: inline-block;
+    line-height: 60px;
+    padding-left: 75px;
+}
+
+.auxicons-toolbar-container {
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    padding-right: 20px;
+}
+
+.auxicons-toolbar-container i {
+    font-size: 20px;
+    color: #80868a;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+
+/*notification container */
+
+.notificacao-container {
+    width: 100%;
+    height: 90px;
+    padding-top: 23px;
+    padding-left: 80px;
+    background-color: #9de1fe;
+    color: #384c56;
+    position: relative;
+}
+
+.fas.fa-bell-slash {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    background-color: #F5FCFF;
+    color: #9DE1fe;
+}
+
+.notificacao-container .receive-notificacao {
+    padding-top: 2px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.activate-notificacao {
+    font-size: 13px;
+}
+
+
+/* busca container */
+
+.busca-container {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    background-color: #f5f5f5;
+    color: #Bdc1c3;
+    padding: 7.5px 10px;
+}
+
+#busca-contato {
+    position: absolute;
+    left: 30px;
+    top: 18px;
+    font-size: 14px;
+}
+
+#busca {
+    width: 100%;
+    height: 35px;
+    margin: auto 0;
+    border: none;
+    border-radius: 17.5px;
+    padding-left: 60px;
+    outline: none;
+}
+
+#busca::placeholder {
+    color: #Bdc1c3;
+}
+
+
+/* Conteiner contato */
+
+.contato-container {
+    height: auto;
+    background-color: #fff;
+}
+
+.contato-box {
+    height: 72px;
+    cursor: pointer;
+    border: 1px solid #f2f2f2;
+    position: relative;
+}
+
+.contato-box:hover {
+    background-color: #f4f5f5;
+}
+
+.ativo-chat {
+    background-color: #e9ebeb;
+}
+
+.ativo-chat.contato-box:hover {
+    background-color: #e9ebeb;
+}
+
+.contato-box .usuario-foto {
+    width: 50px;
+    height: 50px;
+}
+
+.usuario-info {
+    margin-left: 80px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.usuario-name {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 12px;
+}
+
+.usuario-messagepreview {
+    font-size: 14px;
+    color: #454545;
+}
+
+.fas.fa-check-double {
+    margin-right: 5px;
+    color: #4fc3f7;
+}
+
+.message-info {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    display: inline-block;
+}
+
+.message-time {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #CCC
+}
+
+.message-pending {
+    font-size: 12px;
+    float: right;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    background-color: #09d261;
+    border-radius: 50%;
+    line-height: 18px;
+}
+
+
+/*chat*/
+
+.chat-container {
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    left: 410px;
+    height: 100%;
+    width: calc(100% - 410px);
+}
+
+.chat-navbar {
+    padding-left: 75px;
+    height: 60px;
+    background-color: #EEE;
+    border-left: 1px solid #DDD;
+}
+
+.contatoinfo-container {
+    display: inline-block;
+}
+
+.contatoinfo-container .usuario-name {
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+}
+
+.chattools-container {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    padding-right: 20px;
+    float: right;
+}
+
+.chattools-container li {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #80868a;
+    font-size: 18px;
+}
+
+
+/* Menssagens */
+
+.messages-container {
+    background-color: #E1Dad2;
+    height: calc(100% - 120px);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-image {
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/background_whats.png);
+    background-repeat: repeat;
+    opacity: .2;
+}
+
+.chat-messages {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 30px 40px;
+}
+
+.chat-messages p {
+    display: block;
+    color: #262626;
+    font-size: 14px;
+    padding: 7px;
+    border-radius: 7px;
+    width: 200px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.guest-message {
+    background-color: #FFF;
+}
+
+.guest-message:before {
+    content: " ";
+    border-bottom: 17px solid transparent;
+    border-right: 17px solid #fff;
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+
+.usuario-message {
+    background-color: #cdf8c6;
+    float: right;
+}
+
+.usuario-message:after {
+    content: " ";
+    border-bottom: 17px solid transparent;
+    border-left: 17px solid #cdf8c6;
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+
+/* Enviar Mensagemos */
+
+.sendmessage-container {
+    position: relative;
+    height: 60px;
+    background-color: #efefef;
+    border-left: 1px solid #ddd;
+    padding: 0 20px;
+}
+
+#chatmessage {
+    background-color: #FFF;
+    border: none;
+    outline: none;
+    position: absolute;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+    width: calc(100% - 110px);
+    left: 60px;
+    top: 10px;
+}
+
+.sendmessage-container i {
+    font-size: 24px;
+    color: #80868a;
+    cursor: pointer;
+    height: 60px;
+    line-height: 60px;
+}
+
+.fas.fa-microphone {
+    float: right;
+}
+
+.footer-container {
+    width: 410px;
+    height: 10vh;
+    text-align: center;
+    background-color: #91868336;
+    padding: 10px;
+}
+
+footer a {
+    display: flex;
+    text-decoration: none;
+    color: #2790c6;
+    justify-content: center;
+    align-items: center
+}
+
+footer img {
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
